@@ -19,7 +19,7 @@ Para que os testes possam funcionar, é preciso realizar os seguintes passos:
 * `npm test`
 
 ### Deployed
-Está configurado o deploy automático via Heroku e é possível testar as specs abaixo neste [link](https://cs-concrete.herokuapp.com/).
+Está configurado o deploy automático via Heroku e é possível testar as specs abaixo neste [link](https://https://concrete-node.herokuapp.com/).
 
 ### API
 #### POST /sign_up
