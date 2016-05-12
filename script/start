@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+echo "Install/Update dependencies"
+
+npm install
+
+node index.js
+

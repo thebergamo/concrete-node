@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+npm run lint
+
+export NODE_ENV=test
+export SERVER_PORT=8000 
+
+node node_modules/.bin/istanbul cover _mocha -- -R spec --recursive
+
+if [ ! -z "$EXPORT_COVERAGE" ]; then
+	cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+
+	rm -rf ./coverage
+fi

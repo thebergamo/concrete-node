@@ -1,0 +1,23 @@
+language: node_js
+
+node_js:
+  - 4
+  - 5
+  - 6
+
+env:
+  - CXX=g++-4.8 EXPORT_COVERAGE=1 MONGO_URI=mongodb://localhost:27017/cs-desafio-node JWT=awesomeSecretKeyHere
+
+services:
+  - mongodb
+
+cache:
+  directories:
+      - node_modules
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
